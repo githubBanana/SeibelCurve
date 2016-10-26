@@ -3,11 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="200dp"
     android:background="@android:color/holo_orange_dark"
     tools:context="com.xs.seibelcurve.MainActivity"
     >
@@ -20,5 +16,6 @@
         android:layout_height="200dp" />-->
   <com.xs.seibelcurve.WaveLoadingView2
       android:layout_width="match_parent"
-      android:layout_height="200dp" />
+      android:layout_height="100dp"
+      android:background="@android:color/black"/>
 </RelativeLayout>

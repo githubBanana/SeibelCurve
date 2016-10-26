@@ -19,10 +19,7 @@ public class WaveLoadingView2 extends View {
     private Paint wavePaint;
     private Paint wavePaint2;
 
-    private Paint textPaint;
-    private int textColor = 0xffFFFFFF;
-    private int waveColor = 0xff0099CC;
-    private int textSize = 50;
+    private int waveColor = 0x559E9E9E;
     private Path path;
     private Path path2;
 
@@ -71,16 +68,11 @@ public class WaveLoadingView2 extends View {
     private void init() {
         wavePaint = new Paint();
         wavePaint.setAntiAlias(true);
-        wavePaint.setColor(0x559E9E9E);
+        wavePaint.setColor(waveColor);
 
         wavePaint2 = new Paint();
         wavePaint2.setAntiAlias(true);
-        wavePaint2.setColor(0x559E9E9E);
-
-        textPaint = new Paint();
-        textPaint.setAntiAlias(true);
-        textPaint.setColor(textColor);
-        textPaint.setTextSize(textSize);
+        wavePaint2.setColor(waveColor);
 
         path = new Path();
         path2 = new Path();
@@ -96,9 +88,6 @@ public class WaveLoadingView2 extends View {
         setPath2();
         canvas.drawPath(path2, wavePaint2);
 
-        String str = progress + "%";
-        float strWidth = textPaint.measureText(str);
-        canvas.drawText(str, width / 2 - (strWidth / 2), textHeight, textPaint);
     }
 
     private void setPath(){
@@ -160,18 +149,6 @@ public class WaveLoadingView2 extends View {
         k = baseBlank;
         k2 = baseBlank;
         textHeight = baseBlank;
-    }
-
-    public WaveLoadingView2 setTextColor(int color) {
-        this.textColor = color;
-        textPaint.setColor(textColor);
-        return this;
-    }
-
-    public WaveLoadingView2 setTextSize(int size){
-        this.textSize = size;
-        textPaint.setTextSize(textSize);
-        return this;
     }
 
     public WaveLoadingView2 setWaveColor(int color) {
